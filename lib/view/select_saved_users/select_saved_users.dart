@@ -17,18 +17,20 @@ class SelectSavedUsers extends StatelessWidget {
           children: [
             Image.asset(ImageConstants.instagramTypography),
             const SizedBox(
-              height: 15,
+              height: 52,
             ),
             const Column(
               children: [
                 CircleAvatar(
                   radius: 42.5,
+                  backgroundImage:
+                      AssetImage(ImageConstants.jacobWProfilePicture),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 13,
                 ),
                 Text(
-                  "Mohammed Muzammil N",
+                  "jacob_w",
                   style: TextStyle(
                       color: ColorConstants.primaryBlack,
                       fontWeight: FontWeight.w500,
@@ -37,14 +39,11 @@ class SelectSavedUsers extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 30,
+              height: 12,
             ),
             CustomButton(
               buttonText: "Log in",
-              onTap: () {
-                // ignore: avoid_print
-                print("Print");
-              },
+              onTap: () {},
             )
           ],
         ),
