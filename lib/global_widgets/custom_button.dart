@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding: const EdgeInsets.symmetric(vertical: 14),
         decoration: BoxDecoration(
             border: haveBorder
                 ? Border.all(

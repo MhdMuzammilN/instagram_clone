@@ -44,6 +44,14 @@ class SelectSavedUsers extends StatelessWidget {
             CustomButton(
               buttonText: "Log in",
               onTap: () {},
+            ),
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                "Switch accounts",
+                style:
+                    TextStyle(color: ColorConstants.primaryBlue, fontSize: 14),
+              ),
             )
           ],
         ),
