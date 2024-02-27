@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/view/splash_screen/splash_screen.dart';
+import 'package:instagram_clone/view/select_saved_users/select_saved_users.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: SplashScreen(),
+      home: SelectSavedUsers(),
     );
   }
 }
