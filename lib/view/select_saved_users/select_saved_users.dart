@@ -44,16 +44,16 @@ class SelectSavedUsers extends StatelessWidget {
             ),
             CustomButton(
               buttonText: "Log in",
-              onTap: () {
+              onTap: () {},
+            ),
+            TextButton(
+              onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const UserLoginScreen(),
                     ));
               },
-            ),
-            TextButton(
-              onPressed: () {},
               child: const Text(
                 "Switch accounts",
                 style:
