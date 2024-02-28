@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/constants/color_constants.dart';
 import 'package:instagram_clone/core/constants/image_constants.dart';
 import 'package:instagram_clone/global_widgets/custom_button.dart';
+import 'package:instagram_clone/view/user_login_screen/user_login_screen.dart';
 
 class SelectSavedUsers extends StatelessWidget {
   const SelectSavedUsers({super.key});
@@ -43,7 +44,13 @@ class SelectSavedUsers extends StatelessWidget {
             ),
             CustomButton(
               buttonText: "Log in",
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const UserLoginScreen(),
+                    ));
+              },
             ),
             TextButton(
               onPressed: () {},

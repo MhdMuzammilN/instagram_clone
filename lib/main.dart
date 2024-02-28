@@ -14,8 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: SafeArea(child: SplashScreen()),
-      home: UserLoginScreen(),
+      home: SafeArea(child: SplashScreen()),
     );
   }
 }
