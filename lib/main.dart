@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:instagram_clone/view/splash_screen/splash_screen.dart';
-import 'package:instagram_clone/view/user_login_screen/user_login_screen.dart';
 
 void main() {
   runApp(const MyApp());

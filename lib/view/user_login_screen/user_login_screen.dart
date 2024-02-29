@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/constants/color_constants.dart';
 import 'package:instagram_clone/core/constants/image_constants.dart';
 import 'package:instagram_clone/global_widgets/custom_button.dart';
+import 'package:instagram_clone/view/bottom_navigation_screen/bottom_navigation_screen.dart';
 
 class UserLoginScreen extends StatefulWidget {
   const UserLoginScreen({super.key});
@@ -103,7 +104,13 @@ class _UserLoginScreenState extends State<UserLoginScreen> {
                     ? ColorConstants.primaryBlue
                     : ColorConstants.primaryBlue.withOpacity(0.4),
                 buttonText: "Log in",
-                onTap: () {}),
+                onTap: () {
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const BottomNavigationScreen()),
+                      (route) => false);
+                }),
             const SizedBox(
               height: 37,
             ),
