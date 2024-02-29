@@ -7,21 +7,24 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: List.generate(
-                DummyDb.storyList.length,
-                (index) => CustomStoryAvatar(
-                    isAlive: DummyDb.storyList[index]["isLive"],
-                    userName: DummyDb.storyList[index]["userName"],
-                    profilePicture: DummyDb.storyList[index]
-                        ["profilePicture"])),
-          ),
-        )
-      ],
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
+        children: [
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: List.generate(
+                  DummyDb.storyList.length,
+                  (index) => CustomStoryAvatar(
+                      isAlive: DummyDb.storyList[index]["isLive"],
+                      userName: DummyDb.storyList[index]["userName"],
+                      profilePicture: DummyDb.storyList[index]
+                          ["profilePicture"])),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
