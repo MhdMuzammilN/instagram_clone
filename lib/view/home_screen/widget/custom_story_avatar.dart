@@ -31,11 +31,9 @@ class CustomStoryAvatar extends StatelessWidget {
               padding: const EdgeInsets.all(3),
               decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  gradient: LinearGradient(colors: [
-                    Color(0xffFBAA47),
-                    Color(0xffD91A46),
-                    Color(0xffA60F93),
-                  ], begin: Alignment.bottomLeft)),
+                  gradient: LinearGradient(
+                      colors: ColorConstants.storyGradient,
+                      begin: Alignment.bottomLeft)),
               child: Container(
                 padding: const EdgeInsets.all(3),
                 decoration: const BoxDecoration(
@@ -53,11 +51,8 @@ class CustomStoryAvatar extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             vertical: 2, horizontal: 5),
                         decoration: BoxDecoration(
-                            gradient: const LinearGradient(colors: [
-                              Color(0xffC90083),
-                              Color(0xffD22463),
-                              Color(0xffE10038),
-                            ]),
+                            gradient: const LinearGradient(
+                                colors: ColorConstants.liveButtonGradient),
                             borderRadius: BorderRadius.circular(3),
                             border: Border.all(
                                 width: 3, color: ColorConstants.primaryWhite)),
