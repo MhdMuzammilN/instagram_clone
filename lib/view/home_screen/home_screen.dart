@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/core/constants/color_constants.dart';
+import 'package:instagram_clone/core/constants/image_constants.dart';
 import 'package:instagram_clone/dummy_Db.dart';
 import 'package:instagram_clone/view/home_screen/widget/custom_story_avatar.dart';
+import 'package:instagram_clone/view/home_screen/widget/home_feeds_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,9 +11,33 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {}, icon: const Icon(Icons.photo_camera_outlined)),
+        title: Image.asset(
+          ImageConstants.instagramTypography,
+          scale: 1.5,
+        ),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.favorite_border),
+            color: ColorConstants.primaryBlack,
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.send_outlined,
+            ),
+            color: ColorConstants.primaryBlack,
+          )
+        ],
+      ),
       body: Column(
         children: [
+          //#1. Story section.
+
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -22,7 +49,11 @@ class HomeScreen extends StatelessWidget {
                       profilePicture: DummyDb.storyList[index]
                           ["profilePicture"])),
             ),
-          )
+          ),
+
+          // #2. Post's feed section.
+
+          const HomeFeedsCard()
         ],
       ),
     );

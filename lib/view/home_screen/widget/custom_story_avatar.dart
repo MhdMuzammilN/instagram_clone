@@ -16,14 +16,14 @@ class CustomStoryAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(children: [
         //#1 Story-avatar
         Stack(
           alignment: Alignment.center,
           children: [
             const SizedBox(
-              height: 100,
+              height: 75,
             ),
             Container(
               height: 62,
