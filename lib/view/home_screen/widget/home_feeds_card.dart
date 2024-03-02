@@ -14,6 +14,7 @@ class _HomeFeedsCardState extends State<HomeFeedsCard> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         //#1. usersdetail tile - profilepic, username.....
 
@@ -104,7 +105,7 @@ class _HomeFeedsCardState extends State<HomeFeedsCard> {
         //#3 Like, Comment, Share, Caarousal, saved
 
         Padding(
-          padding: const EdgeInsets.all(15),
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
           child: Row(
             children: [
               const Expanded(
@@ -157,10 +158,13 @@ class _HomeFeedsCardState extends State<HomeFeedsCard> {
                 style: TextStyle(color: ColorConstants.primaryBlack),
                 children: [
                   TextSpan(
-                    text: "craig_love",
-                  ),
+                      text: "craig_love ",
+                      style: TextStyle(fontWeight: FontWeight.bold)),
                   TextSpan(text: "and "),
-                  TextSpan(text: "44,686 others")
+                  TextSpan(
+                      text: "44,686 ",
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  TextSpan(text: "others")
                 ],
               ))
             ],
@@ -169,7 +173,7 @@ class _HomeFeedsCardState extends State<HomeFeedsCard> {
 
         //#5 user posts caption section
         Padding(
-          padding: const EdgeInsets.all(15),
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 13),
           child: RichText(
               text: const TextSpan(
                   text: "joshua_i ",
@@ -182,6 +186,17 @@ class _HomeFeedsCardState extends State<HomeFeedsCard> {
                         " The game in Japan was amazing and i want to share some photos",
                     style: TextStyle(fontWeight: FontWeight.w500))
               ])),
+        ),
+
+        //#6 Post upload time section
+
+        const Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 15,
+          ),
+          child: Text(
+            "September 19",
+          ),
         )
       ],
     );

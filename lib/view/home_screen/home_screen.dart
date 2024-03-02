@@ -34,27 +34,29 @@ class HomeScreen extends StatelessWidget {
           )
         ],
       ),
-      body: Column(
-        children: [
-          //#1. Story section.
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            //#1. Story section.
 
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: List.generate(
-                  DummyDb.storyList.length,
-                  (index) => CustomStoryAvatar(
-                      isAlive: DummyDb.storyList[index]["isLive"],
-                      userName: DummyDb.storyList[index]["userName"],
-                      profilePicture: DummyDb.storyList[index]
-                          ["profilePicture"])),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List.generate(
+                    DummyDb.storyList.length,
+                    (index) => CustomStoryAvatar(
+                        isAlive: DummyDb.storyList[index]["isLive"],
+                        userName: DummyDb.storyList[index]["userName"],
+                        profilePicture: DummyDb.storyList[index]
+                            ["profilePicture"])),
+              ),
             ),
-          ),
 
-          // #2. Post's feed section.
+            // #2. Post's feed section.
 
-          const HomeFeedsCard()
-        ],
+            const HomeFeedsCard()
+          ],
+        ),
       ),
     );
   }
