@@ -168,6 +168,21 @@ class _HomeFeedsCardState extends State<HomeFeedsCard> {
         ),
 
         //#5 user posts caption section
+        Padding(
+          padding: const EdgeInsets.all(15),
+          child: RichText(
+              text: const TextSpan(
+                  text: "joshua_i ",
+                  style: TextStyle(
+                      color: ColorConstants.primaryBlack,
+                      fontWeight: FontWeight.w900),
+                  children: [
+                TextSpan(
+                    text:
+                        " The game in Japan was amazing and i want to share some photos",
+                    style: TextStyle(fontWeight: FontWeight.w500))
+              ])),
+        )
       ],
     );
   }
