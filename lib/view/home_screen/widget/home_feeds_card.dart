@@ -138,13 +138,33 @@ class _HomeFeedsCardState extends State<HomeFeedsCard> {
         ),
 
         //#4 Liked by, and Liked Count
-        const Row(
-          children: [
-            CircleAvatar(
-              radius: 8.5,
-            ),
-          ],
-        )
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Row(
+            children: [
+              const CircleAvatar(
+                radius: 9,
+              ),
+              const SizedBox(
+                width: 7,
+              ),
+              RichText(
+                  text: const TextSpan(
+                text: "Liked by ",
+                style: TextStyle(color: ColorConstants.primaryBlack),
+                children: [
+                  TextSpan(
+                    text: "craig_love",
+                  ),
+                  TextSpan(text: "and "),
+                  TextSpan(text: "44,686 others")
+                ],
+              ))
+            ],
+          ),
+        ),
+
+        //#5 user posts caption section
       ],
     );
   }
