@@ -126,9 +126,12 @@ class _HomeFeedsCardState extends State<HomeFeedsCard> {
                 child: Row(
                   children: List.generate(
                       3,
-                      (index) => const CircleAvatar(
-                            radius: 6,
-                            backgroundColor: ColorConstants.primaryBlue,
+                      (index) => const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 2),
+                            child: CircleAvatar(
+                              radius: 3,
+                              backgroundColor: ColorConstants.primaryBlue,
+                            ),
                           )),
                 ),
               ),
