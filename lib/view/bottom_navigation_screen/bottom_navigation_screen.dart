@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/constants/color_constants.dart';
 import 'package:instagram_clone/view/home_screen/home_screen.dart';
+import 'package:instagram_clone/view/search_screen/search_screen.dart';
 
 class BottomNavigationScreen extends StatefulWidget {
   const BottomNavigationScreen({super.key});
@@ -14,9 +15,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
 
   List naviagtionBarItems = [
     const HomeScreen(),
-    Container(
-      color: Colors.yellow,
-    ),
+    const SearchScreen(),
     Container(
       color: Colors.red,
     ),
