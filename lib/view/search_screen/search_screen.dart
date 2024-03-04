@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/core/constants/color_constants.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -17,15 +18,21 @@ class SearchScreen extends StatelessWidget {
                     child: SizedBox(
                   height: 36,
                   child: TextField(
+                    enabled: true,
+                    onTapOutside: (event) => FocusScope.of(context).unfocus(),
                     decoration: InputDecoration(
-                      isDense: true,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
+                        filled: true,
+                        fillColor: ColorConstants.primaryGrey.withOpacity(0.12),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              color: ColorConstants.primaryGrey),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        focusedBorder:
+                            OutlineInputBorder(borderSide: BorderSide.none)),
                   ),
                 )),
                 const SizedBox(
