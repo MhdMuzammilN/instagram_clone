@@ -4,6 +4,7 @@ class ColorConstants {
   static const Color primaryBlue = Color(0xff3797EF);
   static const Color primaryWhite = Color(0xffFFFFFF);
   static const Color primaryBlack = Color(0xff000000);
+  static const Color primaryGrey = Color(0xff767680);
 
   static const List<Color> storyGradient = [
     Color(0xffFBAA47),
