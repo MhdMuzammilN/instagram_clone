@@ -54,7 +54,12 @@ class HomeScreen extends StatelessWidget {
 
             // #2. Post's feed section.
 
-            const HomeFeedsCard()
+            ListView.builder(
+              itemCount: 5,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemBuilder: (context, index) => const HomeFeedsCard(),
+            )
           ],
         ),
       ),
