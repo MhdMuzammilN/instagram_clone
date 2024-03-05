@@ -32,18 +32,24 @@ class SearchScreen extends StatelessWidget {
                               children: List.generate(
                                   2,
                                   (index) => Expanded(
-                                        child: Container(
-                                          color: Colors.amber,
-                                          width: 124,
-                                          child: Text(index.toString()),
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              right: 1, bottom: 1),
+                                          child: Container(
+                                            color: index.isEven
+                                                ? Colors.amber
+                                                : Colors.red,
+                                            width: MediaQuery.sizeOf(context)
+                                                    .width *
+                                                0.33,
+                                            child: Text(index.toString()),
+                                          ),
                                         ),
                                       )),
                             ),
                           ),
                           Expanded(
-                            flex: 3,
                             child: Container(
-                              width: 250,
                               color: ColorConstants.primaryGrey,
                             ),
                           ),
@@ -55,7 +61,9 @@ class SearchScreen extends StatelessWidget {
                                   (index) => Expanded(
                                         child: Container(
                                           color: Colors.amber,
-                                          width: 124,
+                                          width:
+                                              MediaQuery.sizeOf(context).width *
+                                                  0.33,
                                           child: Text(index.toString()),
                                         ),
                                       )),
